@@ -10,6 +10,7 @@
 ## 리스트를 사용하는 이유?: 여러개의 데이터를 한 번에 저장하기 위해서
 ## 문법: 리스트이름 = [데이터, 데이터, ... ,데이터]
 ## 연습문제>> 자신이 좋아하는 NBA 선수들 5명으로 올스타 팀을 만들어보자.
+'''
 BK_player = ["카이리 어빙", "브래들리 빌", "케빈 듀란트", "야니스 아데토쿤보", "조엘 엠비드"]
 print(BK_player)
 
@@ -50,13 +51,17 @@ print(BK_player)
 ## 리스트 제어하기6: 리스트 길이 구하기
 ## 방법: len(리스트이름)
 ## 연습문제>> 현재 리스트에 포함된 데이터의 개수를 구해보자
-
+print(len(BK_player))
 
 ## 리스트 제어하기7: 리스트 정렬하기
 ## 방법1: 리스트이름.sort()  <- 오름차순 정렬
 ## 방법2: 리스트이름.sort(reverse=True)  <- 내림차순 정렬
 ## 연습문제>> 선수들의 이름을 오름차순과 내림차순으로 정렬한 결과를 각각 출력해보자
-
+BK_player.sort()
+print(BK_player)
+BK_player.sort(reverse=True)
+print(BK_player)
+'''
 
 # [반복문]
 ## 반복문이란?: 반복적인 작업을 컴퓨터에 시키기 위한 명령.
@@ -65,37 +70,68 @@ print(BK_player)
 
 ## range() 함수 연습문제: range()를 활용하여
 # 여러 활용 해보기 & list로 만들어 결과 확인하기
-
-
+'''
+print(list(range(10)))
+print(list(range(3,11)))
+print(list(range(3,15,2)))
+print(list(range(50,0,-1)))
+'''
 ## [for 반복문]
 ## : "횟수 or 시퀀스 자료"에 대한 반복문
 ## [문법] for 변수 in 시퀀스자료:
 ##           반복할 문장
 ## for문 연습문제1: range()를 활용한 "횟수" 반복. 원하는 문자열을 10번 반복해서 출력해보자.
-
-
+'''
+for i in range(10):
+    print("안녕")
+'''
 ## for문 연습문제2: list를 활용하여 for 반복문 실행시켜 보기
 '''
 BK_player = ["카이리 어빙", "브래들리 빌", "케빈 듀란트", "야니스 아데토쿤보", "조엘 엠비드"]
-
+for player in BK_player:
+    print(player + " 화이팅!")
 '''
 ## for문 연습문제3: 문자열을 활용하여 for 반복문 실행시켜보기
-
-
+'''
+for a in "안녕하세요":
+    print(a)
+'''
 ## 이중 for문 연습문제: 이중 for문을 활용하여 높이5의 직각삼각형 만들기
-
-
+'''
+for x in range(1,6):
+    for y in range(x):
+        print("*", end='')
+    print("")
+'''
 ## [while 반복문]
 ## : "조건"에 대한 반복문
 ## [문법] while 조건:
 ##          반복할 문장
 ## while문 연습문제1: 기본적인 활용
-
-
+'''
+x = 0
+while x<10:
+    print("안녕하세요")
+    x += 1
+'''
 ## while문 연습문제2: 무한루프와 break를 활용하여 게임 시작메뉴를 만들어보자
-
-
+'''
+while True :
+    select = int(input("프로그램에서 나가려면 -1을 입력하세요>>>"))
+    if select == -1:
+        break
+'''
 ## while문 + continue 연습문제
 ## : continue 문을 활용하여 1~10까지 숫자 중 홀수만 출력하는 프로그램 작성
+'''
+i = 0
+while i<10:
+    i += 1
+    if i % 2 == 0:
+        continue
+    print("%d" %i )
+'''
+
+
 
 

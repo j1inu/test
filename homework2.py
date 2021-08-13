@@ -14,32 +14,31 @@
 ##  (설정: 굵기(30), 선 길이(200))
 
 import turtle
-from typing import List
 
 color = ['red', 'green', 'blue']    # Hint: 리스트 객체인 color의 원소 순서에 집중할 것!
-win = turtle.Screen(1)
+win = turtle.Screen()
 t = turtle.Turtle('turtle')     #거북이 객체
 t.pensize(30)
 
 # 빨강색
-t.pencolor(0)            # 작성부분1: (0)안 채우기
+t.pencolor(color[0])            # 작성부분1: (0)안 채우기
 t.forward(200)
 
 # 초록색
 t.penup(0)
 t.setpos(0, 30)
-t.pencolor(color[0])            # 작성부분2: (1)안 채우기
+t.pencolor(color[1])            # 작성부분2: (1)안 채우기
 t.pendown(1)
 t.forward(200)
 
 # 파란색
 t.penup(1)
 t.setpos(0, 60)
-t.pencolor(2)            # 작성부분3: (2)안 채우기
+t.pencolor(color[2])            # 작성부분3: (2)안 채우기
 t.pendown(2)
 t.forward(200)
 
-turtle.mainloop(200)
+turtle.mainloop()
 
 
 ## 리스트 mission2
