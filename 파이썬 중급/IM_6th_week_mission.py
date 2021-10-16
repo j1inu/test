@@ -128,7 +128,7 @@ class StarShipSprite(Sprite):
 # class AlienSprite
 # : 외계인 우주선을 나타내는 클래스
 class AlienSprite(Sprite):
-    def __init__(self,game , image, x, y):
+    def __init__(self, game, image, x, y):
         super().__init__(image, x, y)
         self.game = game
         self.dx = 10
